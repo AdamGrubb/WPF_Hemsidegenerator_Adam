@@ -1,0 +1,30 @@
+﻿<Window x:Class="Hemsidegeneratorn.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hemsidegeneratorn"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="500">
+    <TabControl>
+        <TabItem Header="Inmatning">
+            <StackPanel Width="200" HorizontalAlignment="Left">
+                <TextBox x:Name="className" Text="Input Classname"/>
+                <TextBox x:Name="inputMessages" AcceptsReturn="True" Text="Input Messages" Height="100"/>
+                <TextBox x:Name="inputCourses" AcceptsReturn="True" Text="Input Courses" Height="100"/>
+                <Button x:Name="generatHtml" Click="generatHtml_Click" Width="150" Height="20"> Generate HTML Code</Button>
+                <Button x:Name="loadFile" Content="Load file" Width="150" Height="20" Click="loadFile_Click"></Button>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="Preview">
+            <StackPanel>
+                <TextBox x:Name="previewPage" HorizontalAlignment="Left"></TextBox>
+                <Button x:Name="printToFile" Click="printToFile_Click" Content="Print to Htmlfile" HorizontalAlignment="Left" Width="100"></Button>
+
+            </StackPanel>
+
+        </TabItem>
+
+
+    </TabControl>
+</Window>
